@@ -3437,14 +3437,14 @@ ssss:Bind(
 
 ssss:Bind(
 	"PAUSE ALL ACTION",
-	Enum.KeyCode.F7,
+	Enum.KeyCode.F3,
 	function()
 		PAUSE = not PAUSE
 	end
 )
 ssss:Bind(
 	"STOP ALL ACTION",
-	Enum.KeyCode.F8,
+	Enum.KeyCode.F4,
 	function()
 		if taskF6 then
 			task.cancel(taskF6)
