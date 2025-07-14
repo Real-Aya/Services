@@ -3383,7 +3383,12 @@ ssss:Bind(
 		taskF5 = task.spawn(function()
 			for i = JJSStartAt, JJSEndAt do
 				while PAUSE and task.wait() do end
-				game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
+				local Tool = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
+				if Tool then
+					Tool:Activate()
+				else
+					game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
+				end
 				task.wait(JJSD1/10)
 				game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(ThaiNumberToWords(i))
 				task.wait(JJSD2/10)
@@ -3426,7 +3431,12 @@ ssss:Bind(
 		taskF6 = task.spawn(function()
 			for i = HJSStartAt, HJSEndAt do
 				while PAUSE and task.wait() do end
-				game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
+				local Tool = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
+				if Tool then
+					Tool:Activate()
+				else
+					game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
+				end
 				task.wait(HJSD1/10)
 				game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(ThaiNumberToWords(i,"hjs"))
 				task.wait(HJSD2/10)
@@ -3454,5 +3464,3 @@ ssss:Bind(
 		end
 	end
 )
-
-
