@@ -3385,7 +3385,11 @@ ssss:Bind(
 				while PAUSE and task.wait() do end
 				local Tool = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
 				if Tool then
-					Tool:Activate()
+					for i = 1,3 do 
+						game:GetService'VirtualUser':CaptureController()
+						game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+						task.wait(0.05)
+					end
 				else
 					game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
 				end
@@ -3433,7 +3437,11 @@ ssss:Bind(
 				while PAUSE and task.wait() do end
 				local Tool = game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool")
 				if Tool then
-					Tool:Activate()
+					for i = 1,3 do 
+						game:GetService'VirtualUser':CaptureController()
+						game:GetService'VirtualUser':Button1Down(Vector2.new(1280, 672))
+						task.wait(0.05)
+					end
 				else
 					game.Players.LocalPlayer.Character.Humanoid:ChangeState('Jumping')
 				end
